@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zbarance | Western Food</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: #001f3f;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    .container {
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .card-body {
+      padding: 1rem;
+      flex: 1;
+    }
+    .card-body h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.2rem;
+      color: #001f3f;
+    }
+    .card-body p {
+      margin: 0.3rem 0;
+      color: #555;
+    }
+    .card-body button {
+      margin-top: 1rem;
+      background-color: #001f3f;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .card-body button:hover {
+      background-color: #004080;
+    }
+  </style>
+</head>
+<body>
+  <header>Zbarance - Western Food</header>
+  <div class="container">
+    <div class="card">
+      <img src="https://source.unsplash.com/400x300/?burger" alt="Burger">
+      <div class="card-body">
+        <h3>Cheese Burger</h3>
+        <p>Rp25.000</p>
+        <button>Pesan Sekarang</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/400x300/?pizza" alt="Pizza">
+      <div class="card-body">
+        <h3>Pepperoni Pizza</h3>
+        <p>Rp45.000</p>
+        <button>Pesan Sekarang</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/400x300/?pasta" alt="Pasta">
+      <div class="card-body">
+        <h3>Spaghetti Carbonara</h3>
+        <p>Rp35.000</p>
+        <button>Pesan Sekarang</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
