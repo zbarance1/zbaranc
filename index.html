@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zbarance | Western Food</title>
   <style>
-    body { font-family: sans-serif; margin: 0; background: #f0f0f0; }
-    header { background-color: #001f3f; color: white; padding: 1rem; text-align: center; font-size: 1.5rem; }
+    body { font-family: sans-serif; margin: 0; background: #f4f4f4; }
+    header { background: #001f3f; color: white; padding: 1rem; text-align: center; }
+    .controls { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; padding: 1rem; background: #e0e0e0; }
+    input, select { padding: 0.5rem; font-size: 1rem; border: 1px solid #ccc; border-radius: 5px; }
     .container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; padding: 1rem; }
-    .card { background: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); overflow: hidden; }
+    .card { background: white; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); overflow: hidden; }
     .card img { width: 100%; height: 160px; object-fit: cover; }
     .card-body { padding: 1rem; }
     .card-body h3 { margin: 0.5rem 0; color: #001f3f; }
@@ -16,13 +18,26 @@
     .card-body a { display: inline-block; margin-top: 0.5rem; padding: 0.5rem 1rem; background: #001f3f; color: white; text-decoration: none; border-radius: 5px; }
     .card-body a:hover { background: #004080; }
   </style>
+  <script>
+    function searchFood() {
+      const keyword = document.getElementById('search').value.toLowerCase();
+      const cards = document.querySelectorAll('.card');
+      cards.forEach(card => {
+        const title = card.querySelector('h3').textContent.toLowerCase();
+        card.style.display = title.includes(keyword) ? '' : 'none';
+      });
+    }
+  </script>
 </head>
 <body>
   <header>Zbarance - Western Food</header>
+  <div class="controls">
+    <input type="text" id="search" onkeyup="searchFood()" placeholder="Cari makanan...">
+  </div>
   <div class="container">
 
     <div class="card">
-      <img src="https://source.unsplash.com/400x300/?burger" alt="Cheese Burger">
+      <img src="https://images.unsplash.com/photo-1550547660-d9450f859349" alt="Cheese Burger">
       <div class="card-body">
         <h3>Cheese Burger</h3>
         <p>Rp25.000</p>
@@ -31,7 +46,7 @@
     </div>
     
     <div class="card">
-      <img src="https://source.unsplash.com/400x300/?pizza" alt="Pepperoni Pizza">
+      <img src="https://images.unsplash.com/photo-1601924582975-4aa3f4f3ba5c" alt="Pepperoni Pizza">
       <div class="card-body">
         <h3>Pepperoni Pizza</h3>
         <p>Rp45.000</p>
@@ -40,7 +55,7 @@
     </div>
     
     <div class="card">
-      <img src="https://source.unsplash.com/400x300/?pasta" alt="Spaghetti Carbonara">
+      <img src="https://images.unsplash.com/photo-1613145998139-b5c0c3f5748e" alt="Spaghetti Carbonara">
       <div class="card-body">
         <h3>Spaghetti Carbonara</h3>
         <p>Rp35.000</p>
@@ -49,7 +64,7 @@
     </div>
     
     <div class="card">
-      <img src="https://source.unsplash.com/400x300/?chicken" alt="Chicken Wings">
+      <img src="https://images.unsplash.com/photo-1605478371345-7b7a7cfefedc" alt="Chicken Wings">
       <div class="card-body">
         <h3>Chicken Wings</h3>
         <p>Rp30.000</p>
@@ -58,7 +73,7 @@
     </div>
     
     <div class="card">
-      <img src="https://source.unsplash.com/400x300/?steak" alt="Beef Steak">
+      <img src="https://images.unsplash.com/photo-1562967916-eb82221dfb36" alt="Beef Steak">
       <div class="card-body">
         <h3>Beef Steak</h3>
         <p>Rp60.000</p>
@@ -67,7 +82,7 @@
     </div>
     
     <div class="card">
-      <img src="https://source.unsplash.com/400x300/?fries" alt="French Fries">
+      <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90" alt="French Fries">
       <div class="card-body">
         <h3>French Fries</h3>
         <p>Rp15.000</p>
@@ -76,7 +91,7 @@
     </div>
     
     <div class="card">
-      <img src="https://source.unsplash.com/400x300/?salad" alt="Caesar Salad">
+      <img src="https://images.unsplash.com/photo-1604908812614-cd4f7e626b7e" alt="Caesar Salad">
       <div class="card-body">
         <h3>Caesar Salad</h3>
         <p>Rp28.000</p>
@@ -85,7 +100,7 @@
     </div>
     
     <div class="card">
-      <img src="https://source.unsplash.com/400x300/?hotdog" alt="Hot Dog">
+      <img src="https://images.unsplash.com/photo-1562967916-eb82221dfb36" alt="Hot Dog">
       <div class="card-body">
         <h3>Hot Dog</h3>
         <p>Rp22.000</p>
@@ -94,7 +109,7 @@
     </div>
     
     <div class="card">
-      <img src="https://source.unsplash.com/400x300/?sandwich" alt="Grilled Sandwich">
+      <img src="https://images.unsplash.com/photo-1625947140432-1e94578e319c" alt="Grilled Sandwich">
       <div class="card-body">
         <h3>Grilled Sandwich</h3>
         <p>Rp26.000</p>
@@ -103,7 +118,7 @@
     </div>
     
     <div class="card">
-      <img src="https://source.unsplash.com/400x300/?fish" alt="Fish and Chips">
+      <img src="https://images.unsplash.com/photo-1625947140432-1e94578e319c" alt="Fish and Chips">
       <div class="card-body">
         <h3>Fish and Chips</h3>
         <p>Rp32.000</p>
